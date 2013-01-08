@@ -18,14 +18,11 @@
         </div>
 
         <div class="four columns footer-block">
-        	<h3>Twitter Widget</h3>
-            
-            <ul id="twitter_update_list" class="twitter">
-            	<li></li>                
-            </ul>
+        				<?php dynamic_sidebar( 'sidebar-2' ); ?>
         </div>
 
         <div class="four columns footer-block">
+
         	<h3>Popular Posts</h3>
             
             <ul class="list-posts">
@@ -60,14 +57,16 @@
         </div>
 
         <div class="four columns last footer-block">
-        	<h3>Contact Us</h3>
+        	<h3>Fale Conosco</h3>
             
-            <p>Suspendisse euismod, nunc eget pellentesque pellentesque, odio lectus tempor antea tristique sem. </p>
+            <p>Você pode participar de diversas
+maneiras.  Nos encontramos na igreja
+aos sábados, as 17:00 horas.
+Entre em contato conosco.</p>
             <div class="contact-details">
-            	<span>Address:</span><p>1600 Pacific Coast Highway, Laguna Beach, CA 92607</p>
-                <span>Phone:</span><p>000 011(949) 458-2300</p>
-                <span>Fax:</span><p>000 011(949) 458-4300</p>
-                <span>E-mail:</span><p><a href="mailto:info@reverence.com">info@reverence.com</a></p>
+            	<span>Endereço:</span><p>Rua Geoseppe Testa, 77, Bela Vista. Aracruz - ES</p>
+                <span>Telefone:</span><p>(27) 3296-1319 (Paróquia)</p>
+                <span>E-mail:</span><p><a href="mailto:contato@gaspe.com.br">contato@gaspe.com.br</a></p>
             </div>
 
             <div class="clearsmall"></div>
@@ -96,10 +95,8 @@
 		<div id="bottombar">       
             <div id="social">
             <!--Social Networks-->
-        	<a href="#"><img src="<? bloginfo("template_directory") ?>/images/social_icons/twitter.png" class="social fade" alt="Twitter"/></a>
+        	<a href="https://twitter.com/grupo_gaspe"><img src="<? bloginfo("template_directory") ?>/images/social_icons/twitter.png" class="social fade" alt="Twitter"/></a>
             <a href="#"><img src="<? bloginfo("template_directory") ?>/images/social_icons/facebook.png" class="social fade" alt="Facebook"/></a>
-            <a href="#"><img src="<? bloginfo("template_directory") ?>/images/social_icons/vimeo.png" class="social fade" alt="Vimeo"/></a>            
-            <a href="#"><img src="<? bloginfo("template_directory") ?>/images/social_icons/flickr.png" class="social fade" alt="Flickr"/></a>
         	<!--End Social Networks--> 
              </div>
              <div class="clear"></div>
@@ -128,7 +125,7 @@
 
 					tpj('.fullwidthbanner').revolution(
 						{	
-							delay:9000,												
+							delay:4000,												
 							startwidth:890,
 							startheight:450,
 							
@@ -152,7 +149,7 @@
 							
 							shadow:0,								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
 							
-							stopLoop:"on"							// on == Stop loop at the last Slie,  off== Loop all the time.
+							stopLoop:"off"							// on == Stop loop at the last Slie,  off== Loop all the time.
 														
 						});	
 					
