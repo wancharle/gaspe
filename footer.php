@@ -18,7 +18,11 @@
         </div>
 
         <div class="four columns footer-block">
-        				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+            <h3>Twitter</h3>
+            <ul id="twitter_update_list">
+                <li> </li>
+            </ul>
+
         </div>
 
         <div class="four columns footer-block">
@@ -109,7 +113,7 @@ Entre em contato conosco.</p>
 <!-- Twitter -->
 
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/igniteflash.json?callback=twitterCallback2&amp;count=2"></script><!--Change "igniteflash" to your twitter name. -->
+<script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/grupo_gaspe.json?callback=twitterCallback2&amp;count=2"></script><!--Change "igniteflash" to your twitter name. -->
 
 <!-- Slider -->
 
@@ -158,6 +162,7 @@ Entre em contato conosco.</p>
 						
 			});
 			</script>
+
 
 </body>
 </html>

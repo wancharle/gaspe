@@ -35,9 +35,25 @@
     	<script src="js/html5.js"></script>
 
     <![endif]-->
-    
+
+
     <script type="text/javascript">		
 		jQuery(document).ready(function(){
+        	jQuery('.carousel').carouFredSel({
+				responsive : true,
+				width:'92%',
+				scroll: 2,
+				items: {
+					width: 300,
+					visible:{
+						min: 1,
+						max: 5
+					}
+				},
+				next : '.car-next',
+				prev : '.car-prev',
+				auto: true
+			});
 			jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({show_title: false});
 			jQuery('#ei-slider').eislideshow({
 				easing		: 'easeOutExpo',

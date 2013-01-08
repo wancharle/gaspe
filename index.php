@@ -119,9 +119,37 @@ que envolve nosso dia-a-dia.
          
         <div class="clear"></div>
 
-    </div>
+        <div class="big_separator"></div>
+        <!-- START Carousel slider -->
+      <div class="sixteen columns">
+            <h5>Nossos Colaboradores do Retiro</h5>
+           <div class="carousel-wrapper logo-carousel">
+                <a href="#" class="car-prev">Prev</a>         
+                <ul class="carousel">
+<?php
+            $patrocinadores= get_posts( array('post_type'=>'patrocinadores',) );
+            foreach( $patrocinadores as $post ) :
+                    setup_postdata($post);
+                    echo "<li><div class='logoc-container'><a href='".get_permalink()."'>";
+                            the_post_thumbnail();
+                    ?></a></div></li>
 
+<?
+                endforeach;
+                ?>
+
+            </ul>
+            <a href="#" class="car-next">Next</a>                      
+            	<div class="clear"></div>
+            </div>            
+            <div class="clear"></div>
+            <!-- END Carousel -->
+        </div>
+
+
+    </div>
 </div>
 <!-- END Content -->
+ 
 
 <? get_footer()?>
