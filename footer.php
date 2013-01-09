@@ -163,6 +163,6 @@ Entre em contato conosco.</p>
 			});
 			</script>
 
-
+<? wp_footer();?>
 </body>
 </html>

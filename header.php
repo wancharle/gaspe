@@ -6,8 +6,9 @@
 
 <head>
     <meta charset="utf-8">
-	<title>Reverence - Responsive Church Theme</title>
+	<title><?php bloginfo('name'); ?>  <?php wp_title(); ?></title>
 
+    <? wp_head(); ?>
     <link rel="stylesheet" type="text/css" href="<? bloginfo("template_directory");?>/style.css" />
     <link rel="stylesheet" type="text/css" href="<? bloginfo("template_directory") ?>/css/prettyPhoto.css" />
     <link href='http://fonts.googleapis.com/css?family=News+Cycle|PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
@@ -89,7 +90,6 @@
      <!-- jQuery KenBurn Slider  -->	
 	<script type="text/javascript" src="<? bloginfo("template_directory") ?>/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>			
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 	
-
 </head>
 
 <body class="red">
