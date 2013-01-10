@@ -7,7 +7,12 @@
 <head>
     <meta charset="utf-8">
 	<title><?php bloginfo('name'); ?>  <?php wp_title(); ?></title>
-
+    
+    <!-- get jQuery from the google apis -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>	
+	   
+	<script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.min.js"></script>
+ 
     <? wp_head(); ?>
     <link rel="stylesheet" type="text/css" href="<? bloginfo("template_directory");?>/style.css" />
     <link rel="stylesheet" type="text/css" href="<? bloginfo("template_directory") ?>/css/prettyPhoto.css" />
@@ -18,12 +23,7 @@
     <meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">   
-    
-    <!-- get jQuery from the google apis -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>	
-	   
-	<script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.min.js"></script>
-    <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.prettyPhoto.js"></script>
+   <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/menu.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.tools.min.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/custom.js"></script>
@@ -94,6 +94,7 @@
 
 <body class="red">
 
+<? get_template_part("facebook");?>
 <!-- BEGIN Header -->
 <div class="header-wrapper"> 
 <header class="container">
