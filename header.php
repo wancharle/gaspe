@@ -30,7 +30,7 @@
 	<script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/sliders/jquery.eislideshow.js"></script>
 	<script src="<? bloginfo("template_directory") ?>/js/jquery.mobilemenu.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.carouFredSel-5.5.0-packed.js"></script>
-
+    <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/filterable.js"></script>
 	<!--[if lt IE 9]>
 
     	<script src="js/html5.js"></script>
