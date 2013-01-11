@@ -45,7 +45,7 @@
 				width:'92%',
 				scroll: 2,
 				items: {
-					width: 300,
+					width: 250,
 					visible:{
 						min: 1,
 						max: 5

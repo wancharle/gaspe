@@ -6,9 +6,11 @@ function register_my_menus() {
   );
 }
 add_action( 'init', 'register_my_menus' );
-
+require_once("includes/override_widgets.php"); 
 
 function avoz_widgets_init() {
+    unregister_widget("WP_Widget_Categories");
+    register_widget("WP_Widget_Categories2");
 
      wp_enqueue_style( 'farbtastic',get_template_directory_uri().'/farbtastic/farbtastic.css' );
    wp_enqueue_script("farbtastic",get_template_directory_uri()."/farbtastic/farbtastic.js" ,array('jquery'));  
@@ -50,7 +52,9 @@ add_action( 'save_post', 'slideradmin_save');
 add_action( 'admin_head-post.php', 'slideradmin_js' );
 add_action( 'admin_head-post-new.php', 'slideradmin_js' );
 
-
+// popular posts
+require_once("includes/popular_posts.php");
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 
 
@@ -89,5 +93,28 @@ function criando_post_type() {
     );
 }
 
+
+function get_related_posts($post_id) {
+    $tags = wp_get_post_tags($post_id);
+    if ($tags) {
+        $first_tag = $tags[0]->term_id;
+        $args=array(
+        'tag__in' => array($first_tag),
+        'post__not_in' => array($post_id),
+        'showposts'=>10,
+        'ignore_sticky_posts'=>1
+    );
+        $my_query = new WP_Query($args);
+        if( $my_query->have_posts() ) {
+            while ($my_query->have_posts()) : $my_query->the_post();
+            $the_permalink = get_permalink();
+            $post_title =  get_the_title();
+            $post_thumb = get_the_post_thumbnail(get_the_ID(),array(130,130));
+            $related_post = '<li><a href="'.$the_permalink.'">'.$post_thumb.'</a><p><a href="'.$the_permalink.'">'.$post_title.'</a></li>';
+            echo $related_post;
+            endwhile;
+        }
+    }
+}
 
 ?>
