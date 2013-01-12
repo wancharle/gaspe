@@ -43,7 +43,7 @@ acontecerá entre os dias 09 e 12 de
 fevereiro.  Não fique de fora. Venha e
 participe!"
            </p>
-            <a href="work-image.html" class="more-link">veja mais notícias</a>
+            <a href="/noticias/" class="more-link">veja mais notícias</a>
         </div>
 
         <div class="twelve columns last">
@@ -62,7 +62,7 @@ participe!"
                         <? the_post_thumbnail("Mensagens")?>
                     </a>
                     <a href="<? the_permalink()?>" class="item-title"><? the_title() ?></a>
-                   <div class="overlay"><a href="<? the_permalink()?>" data-rel="prettyPhoto" title="<? the_title();?>"></a></div>
+                   <a href="<? the_permalink()?>" data-rel="prettyPhoto" title="<? the_title();?>"></a>
                    
                 </li>
 		<? $i=$i+1; endforeach; ?>

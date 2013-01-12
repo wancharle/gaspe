@@ -27,36 +27,24 @@
 
         <div class="four columns footer-block">
 
-        	<h3>Popular Posts</h3>
+        	<h3>Albuns Recentes</h3>
             
             <ul class="list-posts">
+            <?php
+                global $post;
+                $args = array( 'numberposts' => 3, 'category' => get_cat_ID("Albuns"), );
+                $myposts = get_posts( $args );
+                foreach( $myposts as $post ) :  setup_postdata($post); ?>
             	<li>
                 	<div class="list-post-thumb">
-                    	<img src="<? bloginfo("template_directory") ?>/images/demo/footer1.png" alt="" />
+                        <? the_post_thumbnail();?>
                     </div>
                     <div class="list-post-desc">
-                    	<a href="#">Devotions to Our Lord Jesus Christ</a>
+                    	<a href="<? the_permalink() ?>"><? the_title();?></a>
                     </div>
                     <div class="clear"></div>
                 </li>
-                <li>
-                	<div class="list-post-thumb">
-                    	<img src="<? bloginfo("template_directory") ?>/images/demo/footer2.png" alt="" />
-                    </div>
-                    <div class="list-post-desc">
-                    	<a href="#">Prayer to the Blessed Virgin Mary</a>
-                    </div>
-                    <div class="clear"></div>
-                </li>
-                <li>
-                	<div class="list-post-thumb">
-                    	<img src="<? bloginfo("template_directory") ?>/images/demo/footer3.png" alt="" />
-                    </div>
-                    <div class="list-post-desc">
-                    	<a href="#">Prayer to St. Michael the Archangel</a>
-                    </div>
-                    <div class="clear"></div>
-                </li>
+            <? endforeach;?> 
             </ul>
         </div>
 
@@ -99,8 +87,9 @@ Entre em contato conosco.</p>
 		<div id="bottombar">       
             <div id="social">
             <!--Social Networks-->
-        	<a href="https://twitter.com/grupo_gaspe"><img src="<? bloginfo("template_directory") ?>/images/social_icons/twitter.png" class="social fade" alt="Twitter"/></a>
-            <a href="#"><img src="<? bloginfo("template_directory") ?>/images/social_icons/facebook.png" class="social fade" alt="Facebook"/></a>
+        	<a target="_blank" href="https://twitter.com/grupo_gaspe"><img src="<? bloginfo("template_directory") ?>/images/social_icons/twitter.png" class="social fade" alt="Twitter"/></a>
+            <a target="_blank" href="http://www.flickr.com/photos/92069716@N07/"><img src="<? bloginfo("template_directory") ?>/images/social_icons/flickr.png" class="social fade" alt="Flickr"/></a>
+            <a target="_blank" href="http://www.facebook.com/groups/contato.gaspe/?fref=ts"><img src="<? bloginfo("template_directory") ?>/images/social_icons/facebook.png" class="social fade" alt="Facebook"/></a>
         	<!--End Social Networks--> 
              </div>
              <div class="clear"></div>
