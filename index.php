@@ -127,7 +127,7 @@ que envolve nosso dia-a-dia.
                 <a href="#" class="car-prev">Prev</a>         
                 <ul class="carousel">
 <?php
-            $patrocinadores= get_posts( array('post_type'=>'patrocinadores',) );
+            $patrocinadores= get_posts( array('post_type'=>'patrocinadores','numberposts'=>50) );
             foreach( $patrocinadores as $post ) :
                     setup_postdata($post);
                     echo "<li><div class='logoc-container'><a href='".get_permalink()."'>";
