@@ -43,7 +43,7 @@
         	jQuery('.carousel').carouFredSel({
 				responsive : true,
 				width:'92%',
-                height:'150%',
+                height:'120px',
 				scroll: 2,
 				items: {
 					width: 250,

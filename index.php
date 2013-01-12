@@ -123,7 +123,7 @@ que envolve nosso dia-a-dia.
         <!-- START Carousel slider -->
       <div class="sixteen columns">
             <h5>Nossos Colaboradores do Retiro</h5>
-           <div class="carousel-wrapper logo-carousel">
+           <div class="carousel-wrapper logo-carousel" style="overflow:hidden;">
                 <a href="#" class="car-prev">Prev</a>         
                 <ul class="carousel">
 <?php
