@@ -130,7 +130,7 @@ que envolve nosso dia-a-dia.
             $patrocinadores= get_posts( array('post_type'=>'patrocinadores','numberposts'=>50) );
             foreach( $patrocinadores as $post ) :
                     setup_postdata($post);
-                    echo "<li><div class='logoc-container'><a href='".get_permalink()."'>";
+                    echo "<li><div class='patrocinadores-logos'><a href='".get_permalink()."'>";
                             the_post_thumbnail();
                     ?></a></div></li>
 
