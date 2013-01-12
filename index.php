@@ -43,7 +43,7 @@ acontecerá entre os dias 09 e 12 de
 fevereiro.  Não fique de fora. Venha e
 participe!"
            </p>
-            <a href="/category/noticias/" class="more-link">veja mais notícias</a>
+            <a href="/noticias/" class="more-link">veja mais notícias</a>
         </div>
 
         <div class="twelve columns last">
@@ -88,7 +88,7 @@ juventude,  sobre as escolhas que tem
 tomado, sobre a igreja e tudo o mais
 que envolve nosso dia-a-dia.
             </p>
-            <a href="/category/mensagens/" class="more-link blue-more">veja mais mensagens</a>
+            <a href="/mensagens/" class="more-link blue-more">veja mais mensagens</a>
         </div>
 
         <div class="twelve columns last">
