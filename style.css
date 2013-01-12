@@ -11,6 +11,6 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 @import url("css/style.css");
 
-
+.wp-pagenavi a:hover, .wp-pagenavi span.current { border-color:#cb1d1d !important }
 
 

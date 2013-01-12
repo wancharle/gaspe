@@ -41,6 +41,8 @@ add_action( 'widgets_init', 'avoz_widgets_init' );
 add_theme_support( 'post-thumbnails', array( 'post', 'patrocinadores' ) );
 add_image_size( "Mensagens" , 200, 178,true);
 add_image_size( "slider" , 1400,490,true);
+add_image_size( "destaque-categorias" , 260,200,true);
+// IMPORTANTE: Lembre de instalar o plugin regenerate thumbnails para o hard crop funcionar...
 
 
 
