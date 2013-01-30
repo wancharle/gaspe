@@ -52,7 +52,7 @@
 		  <div class="big_separator top10 bottom10"></div>
 
 <h4>COMENTÁRIOS</h4>
-<div class="fb-comments" data-href="http://gaspe.com.br" data-width="700" data-num-posts="20"></div>
+<div class="fb-comments" data-href="<? the_permalink() ?>" data-width="700" data-num-posts="20"></div>
 <div class="bottom30"></div> 
        
 </div>

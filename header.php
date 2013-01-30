@@ -23,8 +23,10 @@
     <meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">   
-   <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/menu.js"></script>
+    <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/validate.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.tools.min.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/custom.js"></script>
 	<script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/sliders/jquery.eislideshow.js"></script>
@@ -36,53 +38,6 @@
     	<script src="js/html5.js"></script>
 
     <![endif]-->
-
-
-    <script type="text/javascript">		
-		jQuery(document).ready(function(){
-        	jQuery('.carousel').carouFredSel({
-				responsive : true,
-				width:'92%',
-                height:'120px',
-				scroll: 2,
-				items: {
-					width: 250,
-					visible:{
-						min: 1,
-						max: 5
-					}
-				},
-				next : '.car-next',
-				prev : '.car-prev',
-				auto: true
-			});
-			jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({show_title: false});
-			jQuery('#ei-slider').eislideshow({
-				easing		: 'easeOutExpo',
-				titleeasing	: 'easeOutExpo',
-				titlespeed	: 1200,
-				autoplay: true
-			});
-			jQuery('.textSlider ul').carouFredSel({
-				responsive : true,
-				width:'100%',
-				items : 1,
-				scroll: 1,
-				items: {visible:1},
-				next : '.ts-next',
-				prev : '.ts-prev',
-				auto: false,
-				scroll : {	            
-					items         : 1,
-					easing        : "easeInExpo",
-					duration      : 700,
-					pauseDuration : 4500,                     
-					pauseOnHover  : true
-				} 
-			});
-		jQuery('.carousel').show();
-		});
-    </script>    
     
         <!-- REVOLUTION BANNER CSS SETTINGS -->	
     <link rel="stylesheet" type="text/css" href="<? bloginfo("template_directory") ?>/css/fullwidth.css" media="screen" />		

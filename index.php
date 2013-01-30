@@ -1,4 +1,49 @@
 <? get_header();?>
+    <script type="text/javascript">		
+		jQuery(document).ready(function(){
+        	jQuery('.carousel').carouFredSel({
+				responsive : true,
+				width:'92%',
+                height:'120px',
+				scroll: 2,
+				items: {
+					width: 250,
+					visible:{
+						min: 1,
+						max: 5
+					}
+				},
+				next : '.car-next',
+				prev : '.car-prev',
+				auto: true
+			});
+			jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({show_title: false});
+			jQuery('#ei-slider').eislideshow({
+				easing		: 'easeOutExpo',
+				titleeasing	: 'easeOutExpo',
+				titlespeed	: 1200,
+				autoplay: true
+			});
+			jQuery('.textSlider ul').carouFredSel({
+				responsive : true,
+				width:'100%',
+				items : 1,
+				scroll: 1,
+				items: {visible:1},
+				next : '.ts-next',
+				prev : '.ts-prev',
+				auto: false,
+				scroll : {	            
+					items         : 1,
+					easing        : "easeInExpo",
+					duration      : 700,
+					pauseDuration : 4500,                     
+					pauseOnHover  : true
+				} 
+			});
+		jQuery('.carousel').show();
+		});
+    </script>    
 <!-- BEGIN Slider -->
 <? get_template_part("slider");?>
 <!-- End Slider -->
@@ -151,5 +196,54 @@ que envolve nosso dia-a-dia.
 </div>
 <!-- END Content -->
  
+
+<!-- Slider -->
+
+			<script type="text/javascript">
+								
+				var tpj=jQuery;
+				tpj.noConflict();
+				
+				tpj(document).ready(function() {
+				
+				if (tpj.fn.cssOriginal!=undefined)
+					tpj.fn.css = tpj.fn.cssOriginal;
+
+					tpj('.fullwidthbanner').revolution(
+						{	
+							delay:4000,												
+							startwidth:890,
+							startheight:450,
+							
+							onHoverStop:"off",						// Stop Banner Timet at Hover on Slide on/off
+							
+							thumbWidth:100,							// Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+							thumbHeight:50,
+							thumbAmount:3,
+							
+							hideThumbs:200,
+							navigationType:"none",					//bullet, thumb, none, both	 (No Shadow in Fullwidth Version !)
+							navigationArrows:"verticalcentered",		//nexttobullets, verticalcentered, none
+							navigationStyle:"round",				//round,square,navbar
+							
+							touchenabled:"on",						// Enable Swipe Function : on/off
+							
+							navOffsetHorizontal:0,
+							navOffsetVertical:20,
+							
+							fullWidth:"on",
+							
+							shadow:0,								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
+							
+							stopLoop:"off"							// on == Stop loop at the last Slie,  off== Loop all the time.
+														
+						});	
+					
+					
+					
+						
+			});
+			</script>
+
 
 <? get_footer()?>
