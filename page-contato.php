@@ -16,7 +16,7 @@ get_header() ?>
         add_filter('wp_mail_content_type',create_function('', 'return "text/html";'));
 
     
-        $headers = 'From: Site <contato@gaspe.com.br>' . "\r\n";
+        $headers = 'From: Site <site@gaspe.com.br>' . "\r\n";
         wp_mail('contato@gaspe.com.br', '[Fale Conosco] '.$nome,$message,$headers );
 
     };
