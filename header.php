@@ -8,12 +8,12 @@
     <meta charset="utf-8">
 	<title><?php bloginfo('name'); ?>  <?php wp_title(); ?></title>
     
+    <? wp_head(); ?>
     <!-- get jQuery from the google apis -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>	
 	   
 	<script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.min.js"></script>
  
-    <? wp_head(); ?>
     <link rel="stylesheet" type="text/css" href="<? bloginfo("template_directory");?>/style.css" />
     <link rel="stylesheet" type="text/css" href="<? bloginfo("template_directory") ?>/css/prettyPhoto.css" />
     <link href='http://fonts.googleapis.com/css?family=News+Cycle|PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
@@ -80,6 +80,7 @@
 					pauseOnHover  : true
 				} 
 			});
+		jQuery('.carousel').show();
 		});
     </script>    
     
