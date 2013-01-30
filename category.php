@@ -9,12 +9,6 @@
                     <li><?php single_cat_title(); ?></li>
                 </ul>
                 <div class="four columns last" id="search-global">
-                    <form id="search-global-form" method="post">
-                        <div>
-                            <input type="text" name="searchterm" value="" title="Search" />                           
-                            <div class="clear"></div>
-                        </div>
-                    </form>
                 </div>
             </div>
             <div class="medium_separator"></div>
