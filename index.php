@@ -41,6 +41,7 @@
 					pauseOnHover  : true
 				} 
 			});
+		jQuery('.carousel').hide();
 		jQuery('.carousel').show();
 		});
     </script>    
@@ -170,7 +171,7 @@ que envolve nosso dia-a-dia.
             <h5>Nossos Colaboradores do Retiro</h5>
            <div class="carousel-wrapper logo-carousel" style="overflow:hidden;">
                 <a href="#" class="car-prev">Prev</a>         
-                <ul class="carousel">
+                <ul class="carousel" id="carousel">
 <?php
             $patrocinadores= get_posts( array('post_type'=>'patrocinadores','numberposts'=>50) );
             foreach( $patrocinadores as $post ) :

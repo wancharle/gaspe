@@ -17,7 +17,7 @@ get_header() ?>
 
     
         $headers = 'From: Site <site@gaspe.com.br>' . "\r\n";
-        wp_mail('contato@gaspe.com.br', '[Fale Conosco] '.$nome,$message,$headers );
+        wp_mail('glaice.10@gmail.com', '[Fale Conosco] '.$nome,$message,$headers );
 
     };
    ?>
