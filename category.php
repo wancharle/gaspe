@@ -27,7 +27,6 @@
         
            	<article class="post-block">
             	<h3><? the_title()?></h3>               
-            	<time datetime="<?php the_time('Y-m-d') ?> "  class="post-date"><? the_time('M j') ?></time>
                 <div class="five columns alpha">
 					<div class="featured-image">
                     	<a href="<? the_permalink()?>"><? the_post_thumbnail('destaque-categorias') ?></a> 
