@@ -1,7 +1,31 @@
 <?php /* Template Name: contato */ 
 get_header() ?>
 <!-- END Header -->
+<?php
+  if($_POST['nome']) :
 
+    $nome = esc_html($_POST["nome"]);
+    $email = esc_html($_POST["email"]);
+    if (isset($_POST["msg"])) $msg = esc_html($_POST["msg"]);
+    
+    
+    if ( is_email($email)){
+        $message = "<p>Nome: ".$nome. "</p>"
+            ."<p>Email: ".$email. "</p>"
+            ."<p>Mensagem: ".$msg. "</p>";
+        add_filter('wp_mail_content_type',create_function('', 'return "text/html";'));
+
+    
+        $headers = 'From: Site <contato@gaspe.com.br>' . "\r\n";
+        wp_mail('contato@gaspe.com.br', '[Fale Conosco] '.$nome,$message,$headers );
+
+    };
+   ?>
+
+<script>
+alert("Recebemos sua mensagem. Assim que possível entraremos em contato..");
+</script>
+<?php endif ;?>
 
 <!-- BEGIN Content -->
 <div class="inner-bg"></div>
@@ -14,12 +38,6 @@ get_header() ?>
                     <li>Fale Conosco</li>
                 </ul>
                 <div class="four columns last" id="search-global">
-                    <form id="search-global-form" method="post">
-                        <div>
-                            <input type="text" name="searchterm" value="" title="Search" />                           
-                            <div class="clear"></div>
-                        </div>
-                    </form>
                 </div>
             </div>
             <div class="medium_separator"></div>
@@ -37,27 +55,23 @@ get_header() ?>
                 <p>
                  Nos encontramos na igreja aos sábados, as 17:00 horas.
                 </p>
-                <form id="contact-form" class="contactForm">
+                <form action="" method="POST" id="contact-form" class="contactForm">
                     <div id="status"></div>
                     <div class="six columns alpha">
-                        <label for="name">Name</label>
-                        <?php if(isset($nameError) && $nameError != ''): ?><span class="errorarr"><?php echo $nameError;?></span><?php endif;?>
-                        <input type="text" id="name" value="" name="name" />
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" value="" name="nome" />
                     </div>
                     <div class="six columns last">
                         <label for="email">Email</label>
-                        <?php if(isset($emailError) && $emailError != ''): ?><span class="errorarr"><?php echo $emailError;?></span><?php endif;?>
                         <input type="text" id="email" name="email" value="" />
                     </div>
                     <div class="clear"></div>
                     <div>
-                        <label for="message">Message</label>
-                        <?php if(isset($messageError) && $messageError != ''): ?><span class="errorarr"><?php echo $messageError;?></span><?php endif;?>
-                        <textarea name="message" id="message" rows="50" cols="10"></textarea>
+                        <label for="msg">Mensagem</label>
+                        <textarea name="msg" id="msg" rows="50" cols="10"></textarea>
                     </div>                   
-                    <div>
-                        <input type="submit" name="send" value="Submit" class="button medium"/>
-                        <input type="reset" name="resent" value="Reset" class="button medium"/>
+                    <div >
+                        <input type="submit" name="send" value="Enviar" class="button medium"/>
                     </div>
                 </form>
                 <div class="clear"></div>

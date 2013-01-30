@@ -49,7 +49,7 @@
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 	
 </head>
 
-<body class="red">
+<body <?body_class("red");?>>
 
 <? get_template_part("facebook");?>
 <!-- BEGIN Header -->
