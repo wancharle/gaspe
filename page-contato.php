@@ -58,12 +58,17 @@ alert("Recebemos sua mensagem. Assim que possível entraremos em contato..");
                 <form action="" method="POST" id="contact-form" class="contactForm">
                     <div id="status"></div>
                     <div class="six columns alpha">
-                        <label for="nome">Nome</label>
+                        <label for="nome">Nome
+                        <span style="margin-left:30px;color:red;" id="form-apoio-nome"> </span></label>
                         <input type="text" id="nome" value="" name="nome" />
+
                     </div>
                     <div class="six columns last">
-                        <label for="email">Email</label>
+                        <label for="email">Email          
+                        <span style="margin-left:30px;color:red" id="form-apoio-email"> </span>
+                        </label>
                         <input type="text" id="email" name="email" value="" />
+
                     </div>
                     <div class="clear"></div>
                     <div>
@@ -103,7 +108,7 @@ alert("Recebemos sua mensagem. Assim que possível entraremos em contato..");
 <script>
 var validator = new FormValidator('contact-form', [{ name: 'nome',  rules: 'required' }, { name: 'email', rules: 'required|valid_email'}], function(errors, event){
 
-   $("p.form-error").html("");
+   $("form.contactForm span").html("");
    if (errors.length > 0) {
         for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
             $("#form-apoio-"+errors[i].name).html(errors[i].message);
