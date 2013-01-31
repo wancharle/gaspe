@@ -27,7 +27,7 @@
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/menu.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.cycle.all.js"></script>
-    <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/validate.js"></script>
+    <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/validate.min.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/jquery.tools.min.js"></script>
     <script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/custom.js"></script>
 	<script type="text/javascript" src="<? bloginfo("template_directory") ?>/js/sliders/jquery.eislideshow.js"></script>

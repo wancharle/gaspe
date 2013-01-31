@@ -17,7 +17,7 @@ get_header() ?>
 
     
         $headers = 'From: Site <site@gaspe.com.br>' . "\r\n";
-        wp_mail('glaice.10@gmail.com', '[Fale Conosco] '.$nome,$message,$headers );
+        wp_mail('contato@gaspe.com.br', '[Fale Conosco] '.$nome,$message,$headers );
 
     };
    ?>
@@ -99,8 +99,21 @@ alert("Recebemos sua mensagem. Assim que possível entraremos em contato..");
        
     </div> 
 </div>
-<!-- END Content -->
 
+<script>
+var validator = new FormValidator('contact-form', [{ name: 'nome',  rules: 'required' }, { name: 'email', rules: 'required|valid_email'}], function(errors, event){
+
+   $("p.form-error").html("");
+   if (errors.length > 0) {
+        for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+            $("#form-apoio-"+errors[i].name).html(errors[i].message);
+        }
+    }   
+
+});
+validator.setMessage('required', 'O campo  %s é obrigatório.');
+validator.setMessage('valid_email', 'Informe um %s válido.');
+</script>{
 
 
 <? get_footer() ?>
