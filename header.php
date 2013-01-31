@@ -7,6 +7,7 @@
 <head>
     <meta charset="utf-8">
 	<title><?php bloginfo('name'); ?>  <?php wp_title(); ?></title>
+<meta property="fb:app_id" content="295765337193040"/>
     
     <? wp_head(); ?>
     <!-- get jQuery from the google apis -->
